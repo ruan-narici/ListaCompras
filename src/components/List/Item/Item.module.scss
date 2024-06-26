@@ -1,0 +1,17 @@
+@import 'styles/variables.scss';
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 5px;
+  border-bottom: 1px solid $gray;
+  margin-bottom: 15px;
+
+  &__text {
+    color: $black;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
