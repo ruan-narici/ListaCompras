@@ -1,0 +1,15 @@
+@import 'styles/variables.scss';
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+
+  &__border_bottom {
+    width: 100px;
+    margin-top: 1rem;
+    border-bottom: 1px solid $dark-gray;
+  }
+}

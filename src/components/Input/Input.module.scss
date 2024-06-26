@@ -1,0 +1,25 @@
+@import 'styles/variables.scss';
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 4px;
+
+  &__description {
+    color: $dark-gray;
+    font-size: .9rem;
+  }
+
+  &__input {
+    border-radius: 6px;
+    border: 1px solid $gray;
+    padding: 10px 15px;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $dark-gray;
+    }
+  }
+}
