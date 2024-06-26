@@ -4,4 +4,8 @@
   align-items: end;
   gap: 6px;
   margin: 25px 0 54px 0;
+
+  div:nth-child(2) input {
+    width: 100px;
+  }
 }
