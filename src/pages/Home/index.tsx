@@ -5,6 +5,7 @@ import List from 'components/List';
 import SubTitle from 'components/SubTitle';
 import { useState } from 'react';
 import { IItem } from 'types/IItem';
+import {v4 as uuidv4} from 'uuid';
 
 export default function Home() {
   const [itens, setItens] = useState<IItem[] | []>([]);
@@ -12,7 +13,7 @@ export default function Home() {
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const newItem: IItem = {
-      id: itens.length ? itens.length - 1 : 1,
+      id: uuidv4(),
       text: event.currentTarget.item.value,
       description: event.currentTarget.quantidade.value,
       complete: false

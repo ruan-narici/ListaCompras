@@ -1,5 +1,5 @@
 export type IItem = {
-  id: number,
+  id: string,
   text: string,
   description: string,
   complete: boolean
