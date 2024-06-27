@@ -5,8 +5,27 @@
   justify-content: space-between;
   align-items: center;
   padding: 7px 5px;
-  border-bottom: 1px solid $gray;
   margin-bottom: 15px;
+  gap: 10px;
+
+  &__radio {
+    border: 0px;
+    width: 30px;
+    height: 35px;
+    vertical-align: middle;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    border-bottom: 1px solid $gray;
+  }
 
   &__text {
     color: $black;

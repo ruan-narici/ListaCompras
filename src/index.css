@@ -8,18 +8,11 @@ body {
   margin: 0;
   font-family: 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
   background-color: #E8ECF1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  min-height: 100vh;
 }

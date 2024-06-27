@@ -2,9 +2,15 @@ import AddButton from 'components/AddButton';
 import styles from './Form.module.scss';
 import Input from 'components/Input';
 
-export default function Form() {
+interface Props {
+  callback?: () => void
+}
+
+export default function Form({ callback }: Props) {
   return (
-    <form className={ styles.form }>
+    <form 
+      className={ styles.form } 
+      onSubmit={ callback }>
       <Input id='item' description='Item' />
       <Input id='quantidade' description='Quantidade' />
       <AddButton />

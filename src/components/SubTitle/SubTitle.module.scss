@@ -1,0 +1,24 @@
+@import 'styles/variables.scss';
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+
+  &__title {
+    color: $black;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  &__border_top {
+    width: 100px;
+    margin-bottom: 1rem;
+    border-top: 1px solid $dark-gray;
+  }
+}
+
+
+

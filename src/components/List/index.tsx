@@ -1,28 +1,22 @@
 import Item from './Item';
 import styles from './List.module.scss';
 
-const itens = [
-  {
-    id: 1,
-    text: 'Leite',
-    description: '3 caixas'
-  },
-  {
-    id: 2,
-    text: 'Maçã',
-    description: '500g'
-  },
-  {
-    id: 3,
-    text: 'Amaciante',
-    description: ''
-  }
-];
+interface Props {
+  data: any[],
+  onRemove: (data: any) => void,
+  onComplete: (data: any) => void
+}
 
-export default function List() {
+export default function List({ data, onRemove, onComplete }: Props) {
   return (
     <ul className={ styles.list }>
-      { itens.map(item => <Item key={ item.id } data={ item } />) }
+      { data.map(item => (
+        <Item 
+          key={ item.id } 
+          onRemove={ onRemove } 
+          onComplete={ onComplete } 
+          data={ item } />
+      ) ) }
     </ul>
   );
 }
