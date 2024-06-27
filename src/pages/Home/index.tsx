@@ -43,6 +43,8 @@ export default function Home() {
 
   function onComplete(data: any) {
     data.complete = true;
+    const newItens = [ ...itens ].filter(item => item.id !== data.id);
+    setItens([...newItens, data]);
   } 
 
   function onRemove(data: any) {
@@ -56,10 +58,14 @@ export default function Home() {
         description='Facilite sua ida ao supermercado!' />
       <Form />
       <List 
-        data={ itens }
+        data={ itens.filter(item => !item.complete ) }
         onComplete={ onComplete }
         onRemove={ onRemove } />
       <SubTitle text='Itens já comprados' />
+      <List 
+        data={ itens.filter(item => item.complete ) }
+        onComplete={ onComplete }
+        onRemove={ onRemove } />
     </section>
   );
 }

@@ -1,6 +1,8 @@
 import Description from 'components/Description';
 import styles from './Item.module.scss';
 import RmButton from 'components/RmButton';
+import RadioButton from 'components/RadioButton';
+import IconComplete from 'components/IconComplete';
 
 interface Props {
   data?: any,
@@ -10,8 +12,8 @@ interface Props {
 
 export default function Item({ data, onRemove, onComplete }: Props) {
   return (
-    <li className={ styles.item }>
-      <input onChange={ () => onComplete(data) } className={ styles.item__radio } type="radio" />
+    <li className={ !data.complete ? styles.item : `${ styles.item } ${styles.item_complete}` }>
+      { !data.complete ? <RadioButton onComplete={ () => onComplete(data) } /> : <IconComplete /> }
       <div className={ styles.item__box }>
         <div>
           <p className={ styles.item__text }>{ data.text }</p>
