@@ -42,7 +42,7 @@ export default function Home() {
         data={ itens.filter(item => !item.complete ) }
         onComplete={ onComplete }
         onRemove={ onRemove } />
-      <SubTitle text='Itens já comprados' />
+      { itens.find(item => item.complete) ? <SubTitle text='Itens já comprados' /> : '' }
       <List 
         data={ itens.filter(item => item.complete ) }
         onComplete={ onComplete }

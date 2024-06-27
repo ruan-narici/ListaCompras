@@ -1,0 +1,27 @@
+@import 'styles/variables.scss';
+
+.box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 4rem;
+  gap: 6rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: $black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 350px;
+  }
+}
