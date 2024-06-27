@@ -3,9 +3,10 @@ import styles from './Input.module.scss';
 interface Props {
   id: string,
   description: string,
+  onChange: (data: string) => void
 }
 
-export default function Input({ id, description }: Props) {
+export default function Input({ id, description, onChange }: Props) {
   return (
     <div className={ styles.box }>
       <label 
@@ -17,7 +18,9 @@ export default function Input({ id, description }: Props) {
         className={ styles.box__input } 
         id={ id } 
         type="text" 
-        required />
+        required 
+        onChange={ (event) => onChange(event.target.value) }
+      />
     </div>
   );
 }

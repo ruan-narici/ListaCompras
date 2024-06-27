@@ -9,13 +9,15 @@ import {v4 as uuidv4} from 'uuid';
 
 export default function Home() {
   const [itens, setItens] = useState<IItem[] | []>([]);
+  const [itemName, setItemName] = useState<string>('');
+  const [quantity, setQuantity] = useState<string>('');
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const newItem: IItem = {
       id: uuidv4(),
-      text: event.currentTarget.item.value,
-      description: event.currentTarget.quantidade.value,
+      text: itemName,
+      description: quantity,
       complete: false
     };
     setItens([...itens, newItem]);
@@ -37,7 +39,10 @@ export default function Home() {
       <Header
         text='Lista de Compras'
         description='Facilite sua ida ao supermercado!' />
-      <Form callback={ (event) => onSubmit(event) } />
+      <Form 
+        setItemName={ setItemName }
+        setQuantity={ setQuantity }
+        callback={ (event) => onSubmit(event) } />
       <List 
         data={ itens.filter(item => !item.complete ) }
         onComplete={ onComplete }

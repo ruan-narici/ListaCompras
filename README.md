@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# ListaCompras
+``` 
+✨ Este projeto foi desenvolvido com o objetivo de aplicar meus conhecimentos 
+em React, TypeScript e SCSS.
+``` 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔨 Requisitos
+### Formulário
 
-## Available Scripts
+Implemente a funcionalidade do formulário para que, ao submetê-lo, o item seja adicionado à lista de compras.
+Você pode optar por utilizar inputs controlados ou não controlados. Pratique a abordagem com a qual você tem menos familiaridade.
+Ao submeter um item, apague o formulário.
+Ao submeter um item, dê o foco no primeiro input para que seja fácil escrever outro item novamente pelo usuário.
 
-In the project directory, you can run:
+### Concluir Item
 
-### `npm start`
+Implemente a funcionalidade de marcar um item como concluído ao clicar no botão correspondente.
+Este item deverá ser movido para a lista de "Itens já comprados".
+O texto do item marcado deverá ser riscado e ter uma cor mais clara.
+O ícone de "A fazer" (círculo vazio) deverá ser substituído pelo ícone de "Feito" (check).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Excluir Item
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Implemente a funcionalidade de excluir um item ao clicar no ícone de lixeira.
+Componentização
 
-### `npm test`
+Organize o código em componentes e mantenha-o legível.
+## 🎨 Design Sugerido
+Temos uma sugestão de design no Figma. No entanto, sinta-se à vontade para criar a aplicação de acordo com a sua criatividade.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Figma
+🔗 Link do design
 
-### `npm run build`
+## 👉🏽 Sobre este mini-projeto
+### O que você irá praticar:
+#### React
+- Componentes controlados e não controlados
+- Formulários
+- Estado
+- Renderização condicional
+- Manipulação de eventos (onClick vs onSubmit)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pré-requisitos
+Conhecimento básico de React (JSX, componentes, props)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
