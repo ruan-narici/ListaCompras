@@ -4,6 +4,13 @@
 em React, TypeScript e SCSS.
 ``` 
 
+![Ruan Narici](./src/assets/img/preview.png)
+
+## Experiências Práticas
+
+Inicialmente optei por utilizar um ambiente não controlado, porém fiquei curioso em relação aos inputs controlados e não controlados. Resolvi fazer uma pesquisa e após isso eu percebi que através dos inputs controlados a validação e manipulação dos dados ficam mais fáceis. No final eu mudei de ideia e fiz com inputs controlados. 
+Achei o desafio bastante interessante e tranquilo. Apesar de não ter nenhum uso de API's, eu pude por em prática a criação de uma boa arquitetura de arquivos para o projeto, a criação e reutilização de componentes e também utilizei as libs do react-router-dom para poder criar uma rota de página não encontrada, uuid para definir o ID de cada item, e por fim utilizei SCSS para estilizar o projeto. 
+
 ## 🔨 Requisitos
 ### Formulário
 
@@ -23,13 +30,8 @@ O ícone de "A fazer" (círculo vazio) deverá ser substituído pelo ícone de "
 
 Implemente a funcionalidade de excluir um item ao clicar no ícone de lixeira.
 Componentização
-
 Organize o código em componentes e mantenha-o legível.
-## 🎨 Design Sugerido
-Temos uma sugestão de design no Figma. No entanto, sinta-se à vontade para criar a aplicação de acordo com a sua criatividade.
 
-### Figma
-🔗 Link do design
 
 ## 👉🏽 Sobre este mini-projeto
 ### O que você irá praticar:
@@ -43,3 +45,4 @@ Temos uma sugestão de design no Figma. No entanto, sinta-se à vontade para cri
 ### Pré-requisitos
 Conhecimento básico de React (JSX, componentes, props)
 
+<a href='https://codante.io/mini-projetos/lista-de-compras-em-react'>DESAFIO [CODANTE]</a>
