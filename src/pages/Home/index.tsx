@@ -4,50 +4,30 @@ import Form from 'components/Form';
 import List from 'components/List';
 import SubTitle from 'components/SubTitle';
 import { useState } from 'react';
-
-const dados = [
-  {
-    id: 1,
-    text: 'Leite',
-    description: '3 caixas',
-    complete: false
-  },
-  {
-    id: 2,
-    text: 'Maçã',
-    description: '500g',
-    complete: false
-  },
-  {
-    id: 3,
-    text: 'Amaciante',
-    description: '',
-    complete: false
-  },
-  {
-    id: 4,
-    text: 'Refrigerante',
-    description: '2 litros',
-    complete: true
-  },
-  {
-    id: 5,
-    text: 'Pasta de dente',
-    description: '2 caixas',
-    complete: true
-  }
-];
+import { IItem } from 'types/IItem';
 
 export default function Home() {
-  const [itens, setItens] = useState(dados);
+  const [itens, setItens] = useState<IItem[] | []>([]);
 
-  function onComplete(data: any) {
+  function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const newItem: IItem = {
+      id: itens.length ? itens.length - 1 : 1,
+      text: event.currentTarget.item.value,
+      description: event.currentTarget.quantidade.value,
+      complete: false
+    };
+    setItens([...itens, newItem]);
+    event.currentTarget.reset();
+  }
+
+  function onComplete(data: IItem) {
     data.complete = true;
     const newItens = [ ...itens ].filter(item => item.id !== data.id);
     setItens([...newItens, data]);
   } 
 
-  function onRemove(data: any) {
+  function onRemove(data: IItem) {
     setItens([ ...itens ].filter(item => item.id !== data.id));
   }
 
@@ -56,7 +36,7 @@ export default function Home() {
       <Header
         text='Lista de Compras'
         description='Facilite sua ida ao supermercado!' />
-      <Form />
+      <Form callback={ (event) => onSubmit(event) } />
       <List 
         data={ itens.filter(item => !item.complete ) }
         onComplete={ onComplete }

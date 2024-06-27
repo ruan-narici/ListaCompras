@@ -7,7 +7,10 @@ interface Props {
 export default function RadioButton({ onComplete }: Props) {
   return (
     <>
-      <input onChange={ onComplete } className={ styles.radio } type="radio" />
+      <input 
+        onClick={ onComplete } 
+        className={ styles.radio } 
+        type="radio" />
     </>
   );
 }

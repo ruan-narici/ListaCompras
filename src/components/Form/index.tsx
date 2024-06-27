@@ -3,7 +3,7 @@ import styles from './Form.module.scss';
 import Input from 'components/Input';
 
 interface Props {
-  callback?: () => void
+  callback?: (event: React.FormEvent<HTMLFormElement>) => void
 }
 
 export default function Form({ callback }: Props) {

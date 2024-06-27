@@ -6,6 +6,8 @@ interface Props {
 
 export default function Title({ text }: Props) {
   return (
-    <h1 className={ styles.title }>{ text }</h1>
+    <h1 className={ styles.title }>
+      { text }
+    </h1>
   );
 }

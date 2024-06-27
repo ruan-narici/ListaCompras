@@ -6,6 +6,8 @@ interface Props {
 
 export default function Description({ description }: Props) {
   return (
-    <span className={ styles.text }>{ description }</span>
+    <span className={ styles.text }>
+      { description }
+    </span>
   );
 }

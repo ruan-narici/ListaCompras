@@ -7,6 +7,10 @@ interface Props {
 
 export default function RmButton({ callback }: Props) {
   return (
-    <button onClick={ callback } className={ styles.button }><Icon /></button>
+    <button 
+      onClick={ callback } 
+      className={ styles.button }>
+      <Icon />
+    </button>
   );
 }
